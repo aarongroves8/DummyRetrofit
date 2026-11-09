@@ -4,7 +4,7 @@ An Android product catalogue app built with **Kotlin** and **Jetpack Compose**. 
 
 ## Demo
 
-![image]
+![image](https://github.com/aarongroves8/DummyRetrofit/blob/master/screenshot.png?raw=true) |
 
 ## Features
 
