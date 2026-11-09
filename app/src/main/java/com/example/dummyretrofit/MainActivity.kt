@@ -97,31 +97,17 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DummyRetrofitTheme {
-        Greeting("Android")
-    }
-}
+
+
 
 @Composable
 fun Product(product: Product) {
@@ -155,7 +141,7 @@ fun Product(product: Product) {
                     .height(200.dp),
                 painter = imageState.painter,
                 contentDescription = product.title,
-                contentScale = ContentScale.Crop
+                contentScale = ContentScale.Fit
                 )
         }
 
@@ -163,7 +149,14 @@ fun Product(product: Product) {
 
         Text(
             modifier = Modifier.padding(horizontal = 16.dp),
-            text = "${product.title} --Price: ${product.price}$",
+            text = "${product.title}",
+            fontSize = 17.sp,
+            fontWeight = FontWeight.SemiBold
+        )
+
+        Text(
+            modifier = Modifier.padding(horizontal = 16.dp),
+            text = "Price: £ ${product.price}",
             fontSize = 17.sp,
             fontWeight = FontWeight.SemiBold
         )
